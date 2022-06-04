@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&family=Poppins&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    background: #edf2f8;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.4;
+    font-size: 13px;
+}
+.attribution{
+    padding-top: 20px;
+}
+.container{
+    width: 1400px;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.card{
+    border-radius: 10px;
+    padding: 30px;
+    padding-bottom: 15px;
+    margin: 15px;
+    background-color: hsl(0, 0%, 100%)
+}
+.card_purple{
+    background: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top -2px right 125px;
+    background-size: 125px;
+    color: #fff;
+    grid-column: 1 / span 2;
+    grid-row: 1;
+}
+.card:nth-of-type(3){
+    grid-row: 1 / span 2;
+    grid-column: 4;
+}
+.card_gray{
+    background: hsl(217, 19%, 35%);
+    color: #fff;
+}
+.card_blackish{
+    background: hsl(219, 29%, 14%);
+    color: #fff;
+    grid-column: 2 / span 2;
+}
+.img_header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.img_header img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.title{
+    line-height: 1.2;
+}
+.title p:nth-of-type(1){
+    font-weight: 600;
+}
+.title p:nth-of-type(2){
+    font-size: 11px;
+    opacity: 50%;
+}
+.large_text{
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.small_text{
+    font-size: 12px;
+    opacity: 70%;
+}
+@media(max-width:768px){
+    
+    .container{
+        width: 375px;
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+    }
+    .card:nth-of-type(1){
+        grid-column: 1;
+    }
+    .card:nth-of-type(2){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .card:nth-of-type(3){
+        grid-column: 1;
+        grid-row: 5;
+    }
+    .card:nth-of-type(4){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .card:nth-of-type(5){
+        grid-column: 1;
+        grid-row: 4;
+    }
+}
+/* for laptops */
+@media(min-width:1100px) and (max-width:1500px){
+    .container{
+        max-width: 1100px;
+    }
+}
